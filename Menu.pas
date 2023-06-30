@@ -46,6 +46,8 @@ begin
     ShowMessage('Anda Belum Mengisi NPM!');
   end else
   Form2.Show;
+  edt1.Text := '';
+  edt2.Text := '';
 end;
 
 procedure TForm1.btn2Click(Sender: TObject);

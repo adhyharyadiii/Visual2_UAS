@@ -50,6 +50,7 @@ object Form2: TForm2
       Caption = 'Siswa'
       object abelSiswa1: TMenuItem
         Caption = 'Tabel Siswa'
+        OnClick = abelSiswa1Click
       end
       object M1: TMenuItem
         Caption = 'Tabel Orang Tua'
