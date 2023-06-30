@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 440
-  Top = 53
+  Left = 253
+  Top = 25
   Width = 678
-  Height = 692
+  Height = 693
   Caption = 'Tabel Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,6 +12,7 @@ object Form3: TForm3
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -405,8 +406,8 @@ object Form3: TForm3
     Top = 176
     Width = 497
     Height = 21
-    Date = 0.851540787036356100
-    Time = 0.851540787036356100
+    Date = 37670.851540787040000000
+    Time = 37670.851540787040000000
     TabOrder = 6
   end
   object cbb1: TComboBox
@@ -416,7 +417,9 @@ object Form3: TForm3
     Height = 21
     ItemHeight = 13
     TabOrder = 7
-    Text = '- Pilih Jenis Kelamin -'
+    Items.Strings = (
+      'L'
+      'P')
   end
   object cbb2: TComboBox
     Left = 152
@@ -425,7 +428,12 @@ object Form3: TForm3
     Height = 21
     ItemHeight = 13
     TabOrder = 8
-    Text = '- Pilih Tingkat Kelas -'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
   end
   object cbb3: TComboBox
     Left = 152
@@ -434,7 +442,9 @@ object Form3: TForm3
     Height = 21
     ItemHeight = 13
     TabOrder = 9
-    Text = '- Pilih Jurusan -'
+    Items.Strings = (
+      'IPA'
+      'IPS')
   end
   object cbb4: TComboBox
     Left = 152
@@ -443,7 +453,12 @@ object Form3: TForm3
     Height = 21
     ItemHeight = 13
     TabOrder = 10
-    Text = '- Pilih Wali Kelas -'
+    Items.Strings = (
+      'Bu Nida'
+      'Pa Pogo'
+      'Pa Kulo'
+      'Bu Nurul'
+      'Bu Nika')
   end
   object edt6: TEdit
     Left = 152
@@ -467,7 +482,7 @@ object Form3: TForm3
     TabOrder = 13
   end
   object btn1: TButton
-    Left = 55
+    Left = 54
     Top = 432
     Width = 105
     Height = 65
@@ -479,9 +494,10 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 14
+    OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 167
+    Left = 166
     Top = 432
     Width = 105
     Height = 65
@@ -495,7 +511,7 @@ object Form3: TForm3
     TabOrder = 15
   end
   object btn3: TButton
-    Left = 279
+    Left = 278
     Top = 432
     Width = 105
     Height = 65
@@ -509,7 +525,7 @@ object Form3: TForm3
     TabOrder = 16
   end
   object btn4: TButton
-    Left = 391
+    Left = 390
     Top = 432
     Width = 105
     Height = 65
@@ -523,7 +539,7 @@ object Form3: TForm3
     TabOrder = 17
   end
   object btn5: TButton
-    Left = 503
+    Left = 502
     Top = 432
     Width = 105
     Height = 65

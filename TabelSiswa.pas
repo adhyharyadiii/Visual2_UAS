@@ -57,6 +57,8 @@ type
     btn3: TButton;
     btn4: TButton;
     btn5: TButton;
+    procedure btn1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,5 +71,45 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm3.btn1Click(Sender: TObject);
+begin
+  edt1.Clear;
+  edt2.Clear;
+  edt3.Clear;
+  edt4.Clear;
+  edt5.Clear;
+  edt6.Clear;
+  edt7.Clear;
+  edt8.Clear;
+  cbb1.Text := '- Pilih Jenis Kelamin -';
+  cbb2.Text := '- Pilih Tingkat Kelas -';
+  cbb3.Text := '- Pilih Jurusan -';
+  cbb4.Text := '- Pilih Wali Kelas -';
+  btn2.Enabled:= True;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
+  btn5.Enabled:= False;
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+begin
+  edt1.Clear;
+  edt2.Clear;
+  edt3.Clear;
+  edt4.Clear;
+  edt5.Clear;
+  edt6.Clear;
+  edt7.Clear;
+  edt8.Clear;
+  cbb1.Text := '- Pilih Jenis Kelamin -';
+  cbb2.Text := '- Pilih Tingkat Kelas -';
+  cbb3.Text := '- Pilih Jurusan -';
+  cbb4.Text := '- Pilih Wali Kelas -';
+  btn2.Enabled:= True;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
+  btn5.Enabled:= False;
+end;
 
 end.
