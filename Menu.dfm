@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 217
-  Top = 156
+  Left = 74
+  Top = 220
   Width = 922
   Height = 480
-  Caption = 'Menu'
+  Caption = ' Menu Utama'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,11 +21,10 @@ object Form1: TForm1
     Height = 393
     TabOrder = 0
     object lbl1: TLabel
-      Left = 223
+      Left = 249
       Top = 56
-      Width = 411
+      Width = 20
       Height = 77
-      Caption = 'Laporan Siswa'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -64
@@ -59,18 +58,31 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
+    object lbl4: TLabel
+      Left = 249
+      Top = 64
+      Width = 360
+      Height = 77
+      Caption = 'Menu Utama'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -64
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
     object edt1: TEdit
       Left = 344
       Top = 168
       Width = 329
-      Height = 25
+      Height = 21
       TabOrder = 0
     end
     object edt2: TEdit
       Left = 344
       Top = 200
       Width = 329
-      Height = 25
+      Height = 21
       TabOrder = 1
     end
     object btn1: TButton
@@ -93,7 +105,7 @@ object Form1: TForm1
       Top = 264
       Width = 129
       Height = 49
-      Caption = 'Keluar'
+      Caption = 'Tutup'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -24

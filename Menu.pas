@@ -16,6 +16,7 @@ type
     edt2: TEdit;
     btn1: TButton;
     btn2: TButton;
+    lbl4: TLabel;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
   private
