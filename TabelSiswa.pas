@@ -57,8 +57,13 @@ type
     btn3: TButton;
     btn4: TButton;
     btn5: TButton;
+    lbl27: TLabel;
+    lbl28: TLabel;
+    edt9: TEdit;
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure db1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -110,6 +115,34 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
+end;
+
+procedure TForm3.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into siswa values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'","'+cbb1.Text+'","'+cbb2.Text+'","'+cbb3.Text+'","'+cbb4.Text+'","'+edt6.Text+'","'+edt7.Text+'","'+edt8.Text+'","'+edt9.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from siswa');
+  zqry1.Open;
+end;
+
+procedure TForm3.db1CellClick(Column: TColumn);
+begin
+  edt1.Text:=zqry1.FieldList[1].AsString;
+  edt2.Text:=zqry1.FieldList[2].AsString;
+  edt3.Text:=zqry1.FieldList[3].AsString;
+  edt4.Text:=zqry1.FieldList[4].AsString;
+  edt5.Text:=zqry1.FieldList[5].AsString;
+  edtdtp1.Date:=zqry1.FieldList[6].AsDateTime;
+  cbb1.Text:=zqry1.FieldList[7].AsString;
+  cbb2.Text:=zqry1.FieldList[8].AsString;
+  cbb3.Text:=zqry1.FieldList[9].AsString;
+  cbb4.Text:=zqry1.FieldList[10].AsString;
+  edt6.Text:=zqry1.FieldList[11].AsString;
+  edt7.Text:=zqry1.FieldList[12].AsString;
+  edt8.Text:=zqry1.FieldList[13].AsString;
 end;
 
 end.

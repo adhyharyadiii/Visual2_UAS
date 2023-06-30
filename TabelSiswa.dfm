@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 253
-  Top = 25
+  Left = 866
+  Top = 114
   Width = 678
-  Height = 693
+  Height = 721
   Caption = 'Tabel Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -353,9 +353,35 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
   end
+  object lbl27: TLabel
+    Left = 40
+    Top = 432
+    Width = 41
+    Height = 18
+    Caption = 'Status'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbl28: TLabel
+    Left = 136
+    Top = 432
+    Width = 5
+    Height = 18
+    Caption = ':'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object db1: TDBGrid
     Left = 8
-    Top = 512
+    Top = 544
     Width = 641
     Height = 129
     DataSource = ds1
@@ -365,6 +391,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = db1CellClick
   end
   object edt1: TEdit
     Left = 152
@@ -483,7 +510,7 @@ object Form3: TForm3
   end
   object btn1: TButton
     Left = 54
-    Top = 432
+    Top = 464
     Width = 105
     Height = 65
     Caption = 'Baru'
@@ -498,7 +525,7 @@ object Form3: TForm3
   end
   object btn2: TButton
     Left = 166
-    Top = 432
+    Top = 464
     Width = 105
     Height = 65
     Caption = 'Simpan'
@@ -509,10 +536,11 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 15
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 278
-    Top = 432
+    Top = 464
     Width = 105
     Height = 65
     Caption = 'Edit'
@@ -526,7 +554,7 @@ object Form3: TForm3
   end
   object btn4: TButton
     Left = 390
-    Top = 432
+    Top = 464
     Width = 105
     Height = 65
     Caption = 'Hapus'
@@ -540,7 +568,7 @@ object Form3: TForm3
   end
   object btn5: TButton
     Left = 502
-    Top = 432
+    Top = 464
     Width = 105
     Height = 65
     Caption = 'Batal'
@@ -551,6 +579,15 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 18
+  end
+  object edt9: TEdit
+    Left = 152
+    Top = 432
+    Width = 497
+    Height = 21
+    Enabled = False
+    TabOrder = 19
+    Text = 'aktif'
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
