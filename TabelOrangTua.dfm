@@ -397,6 +397,7 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 12
+    OnClick = btn5Click
   end
   object edt7: TEdit
     Left = 152
