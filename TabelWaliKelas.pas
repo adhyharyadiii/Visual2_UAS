@@ -47,6 +47,7 @@ type
     procedure bersih;
     procedure posisiawal;
     procedure db1CellClick(Column: TColumn);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -110,6 +111,22 @@ begin
   btn3.Enabled:= True;
   btn4.Enabled:= True;
   btn5.Enabled:= True;
+  btn5.Enabled:= True;
+  edt1.Enabled:= True;
+  edt2.Enabled:= True;
+  edt3.Enabled:= True;
+  edt4.Enabled:= True;
+  edt5.Enabled:= True;
+  cbb1.Enabled:= True;
+  cbb2.Enabled:= True;
+end;
+
+procedure TForm6.btn1Click(Sender: TObject);
+begin
+  btn1.Enabled:= False;
+  btn2.Enabled:= True;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
   btn5.Enabled:= True;
   edt1.Enabled:= True;
   edt2.Enabled:= True;

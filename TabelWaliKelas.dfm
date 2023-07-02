@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 574
-  Top = 93
+  Left = 235
+  Top = 135
   Width = 697
   Height = 528
   Caption = 'Tabel Wali Kelas'
@@ -264,6 +264,7 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 120
