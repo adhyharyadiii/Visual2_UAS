@@ -39,7 +39,7 @@ type
     btn3: TButton;
     btn4: TButton;
     btn5: TButton;
-    edt9: TEdit;
+    edt7: TEdit;
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
@@ -51,6 +51,7 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -144,6 +145,17 @@ begin
   edt6.Enabled:= True;
   cbb1.Enabled:= True;
   cbb2.Enabled:= True;
+end;
+
+procedure TForm4.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into orang_tua values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt7.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from orang_tua');
+  zqry1.Open;
 end;
 
 end.
