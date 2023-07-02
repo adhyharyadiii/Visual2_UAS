@@ -67,6 +67,8 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure posisiawal;
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -82,42 +84,30 @@ implementation
 
 procedure TForm3.btn1Click(Sender: TObject);
 begin
-  edt1.Clear;
-  edt2.Clear;
-  edt3.Clear;
-  edt4.Clear;
-  edt5.Clear;
-  edt6.Clear;
-  edt7.Clear;
-  edt8.Clear;
-  cbb1.Text := '- Pilih Jenis Kelamin -';
-  cbb2.Text := '- Pilih Tingkat Kelas -';
-  cbb3.Text := '- Pilih Jurusan -';
-  cbb4.Text := '- Pilih Wali Kelas -';
+  bersih;
+  btn1.Enabled:= False;
   btn2.Enabled:= True;
   btn3.Enabled:= False;
   btn4.Enabled:= False;
-  btn5.Enabled:= False;
+  btn5.Enabled:= True;
+  edt1.Enabled:= True;
+  edt2.Enabled:= True;
+  edt3.Enabled:= True;
+  edt4.Enabled:= True;
+  edt5.Enabled:= True;
+  edt6.Enabled:= True;
+  edt7.Enabled:= True;
+  edt8.Enabled:= True;
+  edtdtp1.Enabled:= True;
+  cbb1.Enabled:= True;
+  cbb2.Enabled:= True;
+  cbb3.Enabled:= True;
+  cbb4.Enabled:= True;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);
 begin
-  edt1.Clear;
-  edt2.Clear;
-  edt3.Clear;
-  edt4.Clear;
-  edt5.Clear;
-  edt6.Clear;
-  edt7.Clear;
-  edt8.Clear;
-  cbb1.Text := '- Pilih Jenis Kelamin -';
-  cbb2.Text := '- Pilih Tingkat Kelas -';
-  cbb3.Text := '- Pilih Jurusan -';
-  cbb4.Text := '- Pilih Wali Kelas -';
-  btn2.Enabled:= True;
-  btn3.Enabled:= False;
-  btn4.Enabled:= False;
-  btn5.Enabled:= False;
+  posisiawal;
 end;
 
 procedure TForm3.btn2Click(Sender: TObject);
@@ -195,6 +185,45 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
+end;
+
+procedure TForm3.posisiawal;
+begin
+  bersih;
+  btn1.Enabled:= True;
+  btn2.Enabled:= False;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
+  btn5.Enabled:= False;
+  edt1.Enabled:= False;
+  edt2.Enabled:= False;
+  edt3.Enabled:= False;
+  edt4.Enabled:= False;
+  edt5.Enabled:= False;
+  edt6.Enabled:= False;
+  edt7.Enabled:= False;
+  edt8.Enabled:= False;
+  edtdtp1.Enabled:= False;
+  cbb1.Enabled:= False;
+  cbb2.Enabled:= False;
+  cbb3.Enabled:= False;
+  cbb4.Enabled:= False;
+end;
+
+procedure TForm3.bersih;
+begin
+  edt1.Clear;
+  edt2.Clear;
+  edt3.Clear;
+  edt4.Clear;
+  edt5.Clear;
+  edt6.Clear;
+  edt7.Clear;
+  edt8.Clear;
+  cbb1.Text := '- Pilih Jenis Kelamin -';
+  cbb2.Text := '- Pilih Tingkat Kelas -';
+  cbb3.Text := '- Pilih Jurusan -';
+  cbb4.Text := '- Pilih Wali Kelas -';
 end;
 
 end.
