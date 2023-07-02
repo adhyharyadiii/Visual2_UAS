@@ -52,6 +52,7 @@ type
     procedure bersih;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -152,6 +153,17 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into orang_tua values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt7.Text+'")');
   zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from orang_tua');
+  zqry1.Open;
+end;
+
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update orang_tua set nama ="'+edt2.Text+'", telp ="'+edt5.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from orang_tua');
