@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 206
-  Top = 175
+  Left = 362
+  Top = 275
   Width = 928
   Height = 480
   Caption = 'Menu Laporan'
@@ -62,12 +62,13 @@ object Form2: TForm2
     end
     object Kelas1: TMenuItem
       Caption = 'Kelas'
-      object abelKelas1: TMenuItem
+      object TabelKelas: TMenuItem
         Caption = 'Tabel Kelas'
-        OnClick = abelKelas1Click
+        OnClick = TabelKelasClick
       end
-      object abelWaliKelas1: TMenuItem
+      object TabelWaliKelas: TMenuItem
         Caption = 'Tabel Wali Kelas'
+        OnClick = TabelWaliKelasClick
       end
     end
     object Poin1: TMenuItem
