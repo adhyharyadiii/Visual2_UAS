@@ -140,6 +140,17 @@ end;
 
 procedure TForm7.btn3Click(Sender: TObject);
 begin
+  if (edt1.Text= '') or (cbb1.Text ='') or (cbb2.Text ='') or (cbb1.Text ='- Pilih Bobot -') or (cbb2.Text ='- Pilih Jenis -') then
+    begin
+    ShowMessage('INPUTAN WAJIB DIISI!');
+  end else
+  if (edt1.Text = zqry1.Fields[1].AsString) or (cbb2.Text = zqry1.Fields[3].AsString) then
+    begin
+    ShowMessage('DATA TIDAK ADA PERUBAHAN');
+    posisiawal;
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update poin set nama ="'+edt1.Text+'", jenis ="'+cbb2.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
@@ -147,6 +158,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from poin');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIUPDATE!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm7.btn4Click(Sender: TObject);
