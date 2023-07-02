@@ -18,7 +18,7 @@ type
     TabelHubungan: TMenuItem;
     TabelKelas: TMenuItem;
     TabelWaliKelas: TMenuItem;
-    abelPoin1: TMenuItem;
+    TabelPoin: TMenuItem;
     abelRiwayatPoin1: TMenuItem;
     abelUser1: TMenuItem;
     lbl1: TLabel;
@@ -28,6 +28,7 @@ type
     procedure TabelOrangTuaClick(Sender: TObject);
     procedure TabelKelasClick(Sender: TObject);
     procedure TabelWaliKelasClick(Sender: TObject);
+    procedure TabelPoinClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ var
 implementation
 
 uses
-  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas;
+  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin;
 
 {$R *.dfm}
 
@@ -67,6 +68,11 @@ end;
 procedure TForm2.TabelWaliKelasClick(Sender: TObject);
 begin
   Form6.Show;
+end;
+
+procedure TForm2.TabelPoinClick(Sender: TObject);
+begin
+  Form7.Show
 end;
 
 end.

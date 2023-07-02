@@ -7,7 +7,8 @@ uses
   TabelSiswa in 'TabelSiswa.pas' {Form3},
   TabelOrangTua in 'TabelOrangTua.pas' {Form4},
   TabelKelas in 'TabelKelas.pas' {Form5},
-  TabelWaliKelas in 'TabelWaliKelas.pas' {Form6};
+  TabelWaliKelas in 'TabelWaliKelas.pas' {Form6},
+  TabelPoin in 'TabelPoin.pas' {Form7};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.CreateForm(TForm4, Form4);
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm7, Form7);
   Application.Run;
 end.
