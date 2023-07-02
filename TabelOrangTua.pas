@@ -190,6 +190,17 @@ end;
 
 procedure TForm4.btn3Click(Sender: TObject);
 begin
+  if (edt1.Text= '')or (edt2.Text ='')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='') or (edt6.Text ='') or (cbb1.Text ='') or (cbb2.Text ='') or (cbb1.Text ='- Pilih Agama -') or (cbb2.Text ='- Pilih Jenis Kelamin -') then
+    begin
+    ShowMessage('INPUTAN WAJIB DIISI!');
+  end else
+  if (edt2.Text = zqry1.Fields[2].AsString) or (edt5.Text = zqry1.Fields[5].AsString) then
+    begin
+    ShowMessage('DATA TIDAK ADA PERUBAHAN');
+    posisiawal;
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update orang_tua set nama ="'+edt2.Text+'", telp ="'+edt5.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
@@ -197,6 +208,10 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from orang_tua');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIUPDATE!');
+  posisiawal;
+  end;
+
 end;
 
 procedure TForm4.btn4Click(Sender: TObject);
