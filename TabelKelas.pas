@@ -36,6 +36,7 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -137,6 +138,18 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from kelas');
   zqry1.Open;
+end;
+
+procedure TForm5.btn5Click(Sender: TObject);
+begin
+  btn1.Enabled:= True;
+  btn2.Enabled:= False;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
+  btn5.Enabled:= False;
+  edt1.Enabled:= False;
+  cbb1.Enabled:= False;
+  cbb2.Enabled:= False;
 end;
 
 end.
