@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 333
-  Top = 215
+  Left = 388
+  Top = 193
   Width = 697
   Height = 368
   Caption = 'Tabel Kelas'
@@ -152,6 +152,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 120
