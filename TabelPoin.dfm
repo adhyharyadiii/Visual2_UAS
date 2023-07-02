@@ -147,11 +147,11 @@ object Form7: TForm7
     ItemHeight = 13
     TabOrder = 2
     Items.Strings = (
-      'A'
-      'B'
-      'C'
-      'D'
-      'E')
+      '5'
+      '10'
+      '20'
+      '30'
+      '35')
   end
   object cbb2: TComboBox
     Left = 152
@@ -161,8 +161,8 @@ object Form7: TForm7
     ItemHeight = 13
     TabOrder = 3
     Items.Strings = (
-      'IPA'
-      'IPS')
+      'Pelanggaran'
+      'Prestasi')
   end
   object btn1: TButton
     Left = 8
@@ -192,6 +192,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 232

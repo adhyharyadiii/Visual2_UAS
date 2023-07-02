@@ -36,6 +36,7 @@ type
     procedure posisiawal;
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,7 +54,6 @@ implementation
 procedure TForm7.bersih;
 begin
   edt1.Clear;
-  edt2.Clear;
   cbb1.Text := '- Pilih Bobot -';
   cbb2.Text := '- Pilih Jenis -';
 end;
@@ -72,7 +72,6 @@ begin
   btn4.Enabled:= False;
   btn5.Enabled:= False;
   edt1.Enabled:= False;
-  edt2.Enabled:= False;
   cbb1.Enabled:= False;
   cbb2.Enabled:= False;
 end;
@@ -91,7 +90,6 @@ begin
   btn4.Enabled:= True;
   btn5.Enabled:= True;
   edt1.Enabled:= True;
-  edt2.Enabled:= True;
   cbb1.Enabled:= True;
   cbb2.Enabled:= True;
 end;
@@ -104,9 +102,19 @@ begin
   btn4.Enabled:= False;
   btn5.Enabled:= True;
   edt1.Enabled:= True;
-  edt2.Enabled:= True;
   cbb1.Enabled:= True;
   cbb2.Enabled:= True;
+end;
+
+procedure TForm7.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into poin values(null,"'+edt1.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt2.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from poin');
+  zqry1.Open;
 end;
 
 end.
