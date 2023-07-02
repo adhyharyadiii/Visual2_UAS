@@ -50,6 +50,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -154,6 +155,17 @@ procedure TForm6.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update wali_kelas set nama ="'+edt2.Text+'", telp ="'+edt4.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from wali_kelas');
+  zqry1.Open;
+end;
+
+procedure TForm6.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from wali_kelas where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
