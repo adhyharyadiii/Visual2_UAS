@@ -187,7 +187,7 @@ end;
 
 procedure TForm7.btn5Click(Sender: TObject);
 begin
-  begin
+  bersih;
   btn1.Enabled:= True;
   btn2.Enabled:= False;
   btn3.Enabled:= False;
@@ -196,7 +196,6 @@ begin
   edt1.Enabled:= False;
   cbb1.Enabled:= False;
   cbb2.Enabled:= False;
-  end;
 end;
 
 end.
