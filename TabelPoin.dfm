@@ -177,6 +177,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 120
