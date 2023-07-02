@@ -66,6 +66,7 @@ type
     procedure db1CellClick(Column: TColumn);
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -173,6 +174,27 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from siswa');
   zqry1.Open;
+end;
+
+procedure TForm3.btn5Click(Sender: TObject);
+begin
+  edt1.Clear;
+  edt2.Clear;
+  edt3.Clear;
+  edt4.Clear;
+  edt5.Clear;
+  edt6.Clear;
+  edt7.Clear;
+  edt8.Clear;
+  cbb1.Text := '- Pilih Jenis Kelamin -';
+  cbb2.Text := '- Pilih Tingkat Kelas -';
+  cbb3.Text := '- Pilih Jurusan -';
+  cbb4.Text := '- Pilih Wali Kelas -';
+  btn1.Enabled:= True;
+  btn2.Enabled:= True;
+  btn3.Enabled:= False;
+  btn4.Enabled:= False;
+  btn5.Enabled:= False;
 end;
 
 end.
