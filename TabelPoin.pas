@@ -37,6 +37,7 @@ type
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,6 +112,17 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into poin values(null,"'+edt1.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt2.Text+'")');
   zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from poin');
+  zqry1.Open;
+end;
+
+procedure TForm7.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update poin set nama ="'+edt1.Text+'", jenis ="'+cbb2.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from poin');
