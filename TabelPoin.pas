@@ -165,6 +165,8 @@ end;
 
 procedure TForm7.btn4Click(Sender: TObject);
 begin
+  if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('delete from poin where id="'+id+'"');
   zqry1. ExecSQL;
@@ -172,10 +174,20 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from poin');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIHAPUS');
+  posisiawal;
+  end
+  else
+
+ begin
+  ShowMessage('DATA BATAL DIHAPUS');
+  posisiawal;
+  end;
 end;
 
 procedure TForm7.btn5Click(Sender: TObject);
 begin
+  begin
   btn1.Enabled:= True;
   btn2.Enabled:= False;
   btn3.Enabled:= False;
@@ -184,6 +196,7 @@ begin
   edt1.Enabled:= False;
   cbb1.Enabled:= False;
   cbb2.Enabled:= False;
+  end;
 end;
 
 end.
