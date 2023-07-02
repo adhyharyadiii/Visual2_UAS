@@ -216,6 +216,8 @@ end;
 
 procedure TForm4.btn4Click(Sender: TObject);
 begin
+  if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('delete from orang_tua where id="'+id+'"');
   zqry1. ExecSQL;
@@ -223,6 +225,15 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from orang_tua');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIHAPUS');
+  posisiawal;
+  end
+  else
+
+ begin
+  ShowMessage('DATA BATAL DIHAPUS');
+  posisiawal;
+ end;
 end;
 
 procedure TForm4.btn5Click(Sender: TObject);
