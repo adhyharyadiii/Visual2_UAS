@@ -144,6 +144,29 @@ end;
 
 procedure TForm6.btn2Click(Sender: TObject);
 begin
+  if (edt1.Text ='') or (edt2.Text ='') then
+  begin
+    ShowMessage('NIP DAN NAMA TIDAK BOLEH KOSONG!');
+  end else
+    if (edt3.Text ='') or (edt4.Text ='') then
+  begin
+    ShowMessage('ALAMAT DAN TELEPON TIDAK BOLEH KOSONG!');
+  end else
+    if (edt5.Text ='') then
+  begin
+    ShowMessage('PENDIDIKAN TIDAK BOLEH KOSONG!');
+  end else
+    if (cbb1.Text ='') or (cbb1.Text ='- Pilih Jenis Kelamin -') or (cbb2.Text ='') or (cbb2.Text ='- Pilih Mata Pelajaran -')then
+  begin
+    ShowMessage('JENIS KELAMIN DAN TINGKAT KELAS BELUM DIPILIH');
+  end else
+  if (Form6.zqry1.Locate('nip',edt1.Text,[])) or (Form6.zqry1.Locate('telp',edt4.Text,[])) then
+  begin
+    ShowMessage('NIP DAN TELEPON SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt1.SetFocus;
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into wali_kelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+cbb2.Text+'","'+edt5.Text+'","'+edt6.Text+'")');
   zqry1.ExecSQL;
@@ -151,6 +174,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from wali_kelas');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm6.btn3Click(Sender: TObject);
