@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ComCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection;
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, frxClass,
+  frxDBSet;
 
 type
   TForm3 = class(TForm)
@@ -60,6 +61,9 @@ type
     lbl27: TLabel;
     lbl28: TLabel;
     edt9: TEdit;
+    frxDBDataset1: TfrxDBDataset;
+    frxReport1: TfrxReport;
+    btn6: TButton;
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
@@ -69,6 +73,7 @@ type
     procedure btn5Click(Sender: TObject);
     procedure posisiawal;
     procedure bersih;
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -307,6 +312,11 @@ begin
   cbb2.Text := '- Pilih Tingkat Kelas -';
   cbb3.Text := '- Pilih Jurusan -';
   cbb4.Text := '- Pilih Wali Kelas -';
+end;
+
+procedure TForm3.btn6Click(Sender: TObject);
+begin
+  frxReport1.ShowReport()
 end;
 
 end.
