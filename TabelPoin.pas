@@ -112,6 +112,20 @@ end;
 
 procedure TForm7.btn2Click(Sender: TObject);
 begin
+  if (edt1.Text ='') then
+  begin
+    ShowMessage('NAMA TIDAK BOLEH KOSONG!');
+  end else
+  if (cbb1.Text ='') or (cbb1.Text ='- Pilih Bobot -') or (cbb2.Text ='') or (cbb2.Text ='- Pilih Jenis -')then
+  begin
+    ShowMessage('BOBOT DAN JENIS BELUM DIPILIH');
+  end else
+  if (Form7.zqry1.Locate('nama',edt1.Text,[])) then
+  begin
+    ShowMessage('NAMA SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt1.SetFocus;
+  end else
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into poin values(null,"'+edt1.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt2.Text+'")');
   zqry1.ExecSQL;
@@ -119,6 +133,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from poin');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm7.btn3Click(Sender: TObject);
