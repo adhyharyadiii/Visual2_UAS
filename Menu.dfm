@@ -86,7 +86,7 @@ object Form1: TForm1
       TabOrder = 1
     end
     object btn1: TButton
-      Left = 292
+      Left = 364
       Top = 264
       Width = 129
       Height = 49
@@ -99,21 +99,6 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 2
       OnClick = btn1Click
-    end
-    object btn2: TButton
-      Left = 436
-      Top = 264
-      Width = 129
-      Height = 49
-      Caption = 'Tutup'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -24
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btn2Click
     end
   end
 end

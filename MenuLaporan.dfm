@@ -56,7 +56,7 @@ object Form2: TForm2
         Caption = 'Tabel Orang Tua'
         OnClick = TabelOrangTuaClick
       end
-      object abelHubungan1: TMenuItem
+      object TabelHubungan: TMenuItem
         Caption = 'Tabel Hubungan'
       end
     end
@@ -64,6 +64,7 @@ object Form2: TForm2
       Caption = 'Kelas'
       object abelKelas1: TMenuItem
         Caption = 'Tabel Kelas'
+        OnClick = abelKelas1Click
       end
       object abelWaliKelas1: TMenuItem
         Caption = 'Tabel Wali Kelas'

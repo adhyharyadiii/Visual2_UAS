@@ -15,10 +15,8 @@ type
     edt1: TEdit;
     edt2: TEdit;
     btn1: TButton;
-    btn2: TButton;
     lbl4: TLabel;
     procedure btn1Click(Sender: TObject);
-    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,11 +46,6 @@ begin
   Form2.Show;
   edt1.Text := '';
   edt2.Text := '';
-end;
-
-procedure TForm1.btn2Click(Sender: TObject);
-begin
-  Close;
 end;
 
 end.
