@@ -48,6 +48,7 @@ type
     procedure posisiawal;
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -135,6 +136,17 @@ begin
   edt5.Enabled:= True;
   cbb1.Enabled:= True;
   cbb2.Enabled:= True;
+end;
+
+procedure TForm6.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into wali_kelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+cbb2.Text+'","'+edt5.Text+'","'+edt6.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from wali_kelas');
+  zqry1.Open;
 end;
 
 end.
