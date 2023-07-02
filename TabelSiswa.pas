@@ -112,6 +112,42 @@ end;
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin
+    if (edt1.Text ='') or (edt2.Text ='') then
+  begin
+    ShowMessage('NIS DAN NISN TIDAK BOLEH KOSONG!');
+  end else
+    if (edt3.Text ='') or (edt4.Text ='') then
+  begin
+    ShowMessage('NAMA SISWA DAN NIK TIDAK BOLEH KOSONG!');
+  end else
+    if (edt5.Text ='') or (edt6.Text ='') then
+  begin
+    ShowMessage('TEMPAT LAHIR DAN ALAMAT TIDAK BOLEH KOSONG!');
+  end else
+    if (edt7.Text ='') or (edt8.Text ='')then
+  begin
+    ShowMessage('TELEPON DAN HP TIDAK BOLEH KOSONG!');
+  end else
+    if (cbb1.Text ='') or (cbb1.Text ='- Pilih Jenis Kelamin -') or (cbb2.Text ='') or (cbb2.Text ='- Pilih Tingkat Kelas -')then
+  begin
+    ShowMessage('JENIS KELAMIN DAN TINGKAT KELAS BELUM DIPILIH');
+  end else
+    if (cbb3.Text ='') or (cbb3.Text ='- Pilih Jurusan -') or (cbb4.Text ='') or (cbb4.Text ='- Pilih Wali Kelas -')then
+  begin
+    ShowMessage('JURUSAN DAN WALI KELAS BELUM DIPILIH');
+  end else
+  if (Form3.zqry1.Locate('nis',edt1.Text,[])) or (Form3.zqry1.Locate('nisn',edt2.Text,[])) then
+  begin
+    ShowMessage('NIS DAN NISN SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt1.SetFocus;
+  end else
+  if (Form3.zqry1.Locate('telp',edt7.Text,[])) or (Form3.zqry1.Locate('hp',edt8.Text,[])) then
+  begin
+    ShowMessage('TELEPON DAN HP SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt7.SetFocus;
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into siswa values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'","'+cbb1.Text+'","'+cbb2.Text+'","'+cbb3.Text+'","'+cbb4.Text+'","'+edt6.Text+'","'+edt7.Text+'","'+edt8.Text+'","'+edt9.Text+'")');
   zqry1.ExecSQL;
@@ -119,6 +155,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from siswa');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm3.db1CellClick(Column: TColumn);
@@ -158,7 +197,7 @@ end;
 procedure TForm3.btn4Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from siswa where id=8');
+  zqry1.SQL.Add('delete from siswa where id=15');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

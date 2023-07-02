@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 1102
-  Top = 235
+  Left = 895
+  Top = 181
   Width = 678
-  Height = 721
+  Height = 723
   Caption = 'Tabel Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
