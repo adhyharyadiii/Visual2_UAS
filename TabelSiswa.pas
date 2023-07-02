@@ -77,6 +77,7 @@ type
 
 var
   Form3: TForm3;
+  id: string;
 
 implementation
 
@@ -162,6 +163,7 @@ end;
 
 procedure TForm3.db1CellClick(Column: TColumn);
 begin
+  id:= zqry1.Fields[0].AsString;
   edt1.Text:=zqry1.FieldList[1].AsString;
   edt2.Text:=zqry1.FieldList[2].AsString;
   edt3.Text:=zqry1.FieldList[3].AsString;
@@ -181,23 +183,52 @@ begin
   btn3.Enabled:= True;
   btn4.Enabled:= True;
   btn5.Enabled:= True;
+  btn5.Enabled:= True;
+  edt1.Enabled:= True;
+  edt2.Enabled:= True;
+  edt3.Enabled:= True;
+  edt4.Enabled:= True;
+  edt5.Enabled:= True;
+  edt6.Enabled:= True;
+  edt7.Enabled:= True;
+  edt8.Enabled:= True;
+  edtdtp1.Enabled:= True;
+  cbb1.Enabled:= True;
+  cbb2.Enabled:= True;
+  cbb3.Enabled:= True;
+  cbb4.Enabled:= True;
 end;
 
 procedure TForm3.btn3Click(Sender: TObject);
 begin
+  if (edt1.Text= '')or (edt2.Text ='')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='') or (edt6.Text ='') or (edt7.Text ='') or (edt8.Text ='') or (cbb1.Text ='') or (cbb2.Text ='') or (cbb3.Text ='') or (cbb4.Text ='') or (cbb1.Text ='- Pilih Jenis Kelamin -') or (cbb2.Text ='- Pilih Tingkat Kelas -') or (cbb3.Text ='- Pilih Jurusan -') or (cbb4.Text ='- Pilih Wali Kelas -')then
+    begin
+    ShowMessage('INPUTAN WAJIB DIISI!');
+  end else
+  if (edt3.Text = zqry1.Fields[3].AsString) or (edt7.Text = zqry1.Fields[12].AsString) then
+    begin
+    ShowMessage('DATA TIDAK ADA PERUBAHAN');
+    posisiawal;
+  end else
+
+ begin
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('update siswa set nama_siswa ="'+edt3.Text+'", telp ="'+edt7.Text+'" where id= 1');
+  zqry1.SQL.Add('update siswa set nama_siswa ="'+edt3.Text+'", telp ="'+edt7.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from siswa');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIUPDATE!');
+  posisiawal;
+ end;
+
 end;
 
 procedure TForm3.btn4Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from siswa where id=15');
+  zqry1.SQL.Add('delete from siswa where id=16');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

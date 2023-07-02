@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 895
-  Top = 181
+  Left = 1063
+  Top = 507
   Width = 678
   Height = 723
   Caption = 'Tabel Siswa'
