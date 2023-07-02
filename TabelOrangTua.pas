@@ -153,6 +153,29 @@ end;
 
 procedure TForm4.btn2Click(Sender: TObject);
 begin
+    if (edt1.Text ='') or (edt2.Text ='') then
+  begin
+    ShowMessage('NIK DAN NAMA TIDAK BOLEH KOSONG!');
+  end else
+    if (edt3.Text ='') or (edt4.Text ='') then
+  begin
+    ShowMessage('PENDIDIKAN DAN PEKERJAAN TIDAK BOLEH KOSONG!');
+  end else
+    if (edt5.Text ='') or (edt6.Text ='') then
+  begin
+    ShowMessage('TELEPON DAN ALAMAT TIDAK BOLEH KOSONG!');
+  end else
+    if (cbb1.Text ='') or (cbb1.Text ='- Pilih Agama -') or (cbb2.Text ='') or (cbb2.Text ='- Pilih Jenis Kelamin -')then
+  begin
+    ShowMessage('AGAMA DAN JENIS KELAMIN BELUM DIPILIH');
+  end else
+  if (Form4.zqry1.Locate('nik',edt1.Text,[])) or (Form4.zqry1.Locate('telp',edt5.Text,[]))then
+  begin
+    ShowMessage('NIK DAN TELEPON SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt1.SetFocus;
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into orang_tua values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+cbb1.Text+'","'+cbb2.Text+'","'+edt7.Text+'")');
   zqry1.ExecSQL;
@@ -160,6 +183,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from orang_tua');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm4.btn3Click(Sender: TObject);
