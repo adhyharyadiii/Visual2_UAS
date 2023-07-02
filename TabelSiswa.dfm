@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 651
-  Top = 52
+  Left = 482
+  Top = 46
   Width = 678
   Height = 721
   Caption = 'Tabel Siswa'
@@ -566,6 +566,7 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 17
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 502

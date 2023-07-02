@@ -65,6 +65,7 @@ type
     procedure btn2Click(Sender: TObject);
     procedure db1CellClick(Column: TColumn);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -156,6 +157,17 @@ procedure TForm3.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update siswa set nama_siswa ="'+edt3.Text+'", telp ="'+edt7.Text+'" where id= 1');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from siswa');
+  zqry1.Open;
+end;
+
+procedure TForm3.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from siswa where id=8');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
