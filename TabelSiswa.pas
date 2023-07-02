@@ -64,6 +64,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure db1CellClick(Column: TColumn);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -143,6 +144,23 @@ begin
   edt6.Text:=zqry1.FieldList[11].AsString;
   edt7.Text:=zqry1.FieldList[12].AsString;
   edt8.Text:=zqry1.FieldList[13].AsString;
+
+  btn1.Enabled:= False;
+  btn2.Enabled:= False;
+  btn3.Enabled:= True;
+  btn4.Enabled:= True;
+  btn5.Enabled:= True;
+end;
+
+procedure TForm3.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update siswa set nama_siswa ="'+edt3.Text+'", telp ="'+edt7.Text+'" where id= 1');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from siswa');
+  zqry1.Open;
 end;
 
 end.
