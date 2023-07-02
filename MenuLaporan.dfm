@@ -48,12 +48,13 @@ object Form2: TForm2
     Top = 8
     object Siswa1: TMenuItem
       Caption = 'Siswa'
-      object abelSiswa1: TMenuItem
+      object TabelSiswa: TMenuItem
         Caption = 'Tabel Siswa'
-        OnClick = abelSiswa1Click
+        OnClick = TabelSiswaClick
       end
-      object M1: TMenuItem
+      object TabelOrangTua: TMenuItem
         Caption = 'Tabel Orang Tua'
+        OnClick = TabelOrangTuaClick
       end
       object abelHubungan1: TMenuItem
         Caption = 'Tabel Hubungan'
