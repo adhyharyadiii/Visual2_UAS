@@ -35,6 +35,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -120,6 +121,17 @@ procedure TForm5.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update kelas set nama ="'+edt1.Text+'", jenis ="'+cbb1.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from kelas');
+  zqry1.Open;
+end;
+
+procedure TForm5.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from kelas where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
