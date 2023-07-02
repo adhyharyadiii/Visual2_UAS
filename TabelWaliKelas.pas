@@ -228,6 +228,7 @@ end;
 
 procedure TForm6.btn5Click(Sender: TObject);
 begin
+  bersih;
   btn1.Enabled:= True;
   btn2.Enabled:= False;
   btn3.Enabled:= False;
