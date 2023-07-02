@@ -249,23 +249,25 @@ end;
 
 procedure TForm3.btn5Click(Sender: TObject);
 begin
-  edt1.Clear;
-  edt2.Clear;
-  edt3.Clear;
-  edt4.Clear;
-  edt5.Clear;
-  edt6.Clear;
-  edt7.Clear;
-  edt8.Clear;
-  cbb1.Text := '- Pilih Jenis Kelamin -';
-  cbb2.Text := '- Pilih Tingkat Kelas -';
-  cbb3.Text := '- Pilih Jurusan -';
-  cbb4.Text := '- Pilih Wali Kelas -';
+  bersih;
   btn1.Enabled:= True;
-  btn2.Enabled:= True;
+  btn2.Enabled:= False;
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
+  edt1.Enabled:= False;
+  edt2.Enabled:= False;
+  edt3.Enabled:= False;
+  edt4.Enabled:= False;
+  edt5.Enabled:= False;
+  edt6.Enabled:= False;
+  edt7.Enabled:= False;
+  edt8.Enabled:= False;
+  edtdtp1.Enabled:= False;
+  cbb1.Enabled:= False;
+  cbb2.Enabled:= False;
+  cbb3.Enabled:= False;
+  cbb4.Enabled:= False;
 end;
 
 procedure TForm3.posisiawal;
