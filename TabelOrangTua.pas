@@ -53,6 +53,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -163,6 +164,17 @@ procedure TForm4.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update orang_tua set nama ="'+edt2.Text+'", telp ="'+edt5.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from orang_tua');
+  zqry1.Open;
+end;
+
+procedure TForm4.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from orang_tua where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

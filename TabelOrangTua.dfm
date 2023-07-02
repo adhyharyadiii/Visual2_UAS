@@ -382,6 +382,7 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 456
