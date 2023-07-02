@@ -49,6 +49,7 @@ type
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,11 +102,11 @@ begin
   id:= zqry1.Fields[0].AsString;
   edt1.Text:=zqry1.FieldList[1].AsString;
   edt2.Text:=zqry1.FieldList[2].AsString;
-  edt3.Text:=zqry1.FieldList[3].AsString;
-  edt4.Text:=zqry1.FieldList[4].AsString;
-  edt5.Text:=zqry1.FieldList[5].AsString;
-  cbb1.Text:=zqry1.FieldList[6].AsString;
-  cbb2.Text:=zqry1.FieldList[7].AsString;
+  cbb1.Text:=zqry1.FieldList[3].AsString;
+  edt3.Text:=zqry1.FieldList[4].AsString;
+  edt4.Text:=zqry1.FieldList[5].AsString;
+  cbb2.Text:=zqry1.FieldList[6].AsString;
+  edt5.Text:=zqry1.FieldList[7].AsString;
 
   btn1.Enabled:= False;
   btn2.Enabled:= False;
@@ -143,6 +144,17 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into wali_kelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+cbb2.Text+'","'+edt5.Text+'","'+edt6.Text+'")');
   zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from wali_kelas');
+  zqry1.Open;
+end;
+
+procedure TForm6.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update wali_kelas set nama ="'+edt2.Text+'", telp ="'+edt4.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from wali_kelas');
