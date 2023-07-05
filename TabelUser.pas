@@ -116,6 +116,20 @@ end;
 
 procedure TForm8.btn2Click(Sender: TObject);
 begin
+  if (edt1.Text ='') or (edt2.Text ='')then
+  begin
+    ShowMessage('NAMA DAN PASSWORD TIDAK BOLEH KOSONG!');
+  end else
+  if (cbb1.Text ='') or (cbb1.Text ='- Pilih Level -') then
+  begin
+    ShowMessage('LEVEL BELUM DIPILIH');
+  end else
+  if (Form8.zqry1.Locate('siswa',edt1.Text,[])) then
+  begin
+    ShowMessage('NAMA SUDAH ADA DIDALAM SISTEM ( TIDAK BOLEH SAMA )');
+    edt1.SetFocus;
+  end else
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into user values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'")');
   zqry1.ExecSQL;
@@ -123,6 +137,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from user');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm8.btn3Click(Sender: TObject);
