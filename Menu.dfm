@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 301
-  Top = 211
+  Left = 325
+  Top = 240
   Width = 922
   Height = 480
   Caption = ' Menu Utama'
@@ -32,25 +32,12 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object lbl2: TLabel
-      Left = 192
-      Top = 168
-      Width = 139
-      Height = 23
-      Caption = 'Nama Lengkap :'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -19
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
-    end
     object lbl3: TLabel
-      Left = 280
+      Left = 240
       Top = 200
-      Width = 51
+      Width = 91
       Height = 23
-      Caption = 'NPM :'
+      Caption = 'Password :'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -67,6 +54,19 @@ object Form1: TForm1
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -64
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lbl2: TLabel
+      Left = 240
+      Top = 168
+      Width = 92
+      Height = 23
+      Caption = 'Nama      :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False

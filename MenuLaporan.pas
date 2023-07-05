@@ -19,16 +19,17 @@ type
     TabelKelas: TMenuItem;
     TabelWaliKelas: TMenuItem;
     TabelPoin: TMenuItem;
-    abelRiwayatPoin1: TMenuItem;
-    abelUser1: TMenuItem;
+    TabelRiwayatPoin: TMenuItem;
+    TabelUser: TMenuItem;
     lbl1: TLabel;
     btn2: TButton;
-    procedure btn2Click(Sender: TObject);
     procedure TabelSiswaClick(Sender: TObject);
     procedure TabelOrangTuaClick(Sender: TObject);
     procedure TabelKelasClick(Sender: TObject);
     procedure TabelWaliKelasClick(Sender: TObject);
     procedure TabelPoinClick(Sender: TObject);
+    procedure TabelUserClick(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,14 +42,9 @@ var
 implementation
 
 uses
-  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin;
+  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin, TabelUser;
 
 {$R *.dfm}
-
-procedure TForm2.btn2Click(Sender: TObject);
-begin
-  close;
-end;
 
 procedure TForm2.TabelSiswaClick(Sender: TObject);
 begin
@@ -73,6 +69,16 @@ end;
 procedure TForm2.TabelPoinClick(Sender: TObject);
 begin
   Form7.Show
+end;
+
+procedure TForm2.TabelUserClick(Sender: TObject);
+begin
+  Form8.Show;
+end;
+
+procedure TForm2.btn2Click(Sender: TObject);
+begin
+  close;
 end;
 
 end.

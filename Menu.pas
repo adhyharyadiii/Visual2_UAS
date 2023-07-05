@@ -10,12 +10,12 @@ type
   TForm1 = class(TForm)
     pnl1: TPanel;
     lbl1: TLabel;
-    lbl2: TLabel;
     lbl3: TLabel;
     edt1: TEdit;
     edt2: TEdit;
     btn1: TButton;
     lbl4: TLabel;
+    lbl2: TLabel;
     procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
@@ -41,7 +41,7 @@ begin
   end else
   if (edt2.Text = '') then
   begin
-    ShowMessage('Anda Belum Mengisi NPM!');
+    ShowMessage('Anda Belum Mengisi Password!');
   end else
   Form2.Show;
   edt1.Text := '';

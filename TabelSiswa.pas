@@ -27,7 +27,6 @@ type
     lbl11: TLabel;
     lbl12: TLabel;
     lbl14: TLabel;
-    edt1: TEdit;
     lbl13: TLabel;
     lbl15: TLabel;
     lbl16: TLabel;
@@ -64,6 +63,7 @@ type
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
     btn6: TButton;
+    edt1: TEdit;
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);

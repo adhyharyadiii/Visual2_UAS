@@ -8,7 +8,8 @@ uses
   TabelOrangTua in 'TabelOrangTua.pas' {Form4},
   TabelKelas in 'TabelKelas.pas' {Form5},
   TabelWaliKelas in 'TabelWaliKelas.pas' {Form6},
-  TabelPoin in 'TabelPoin.pas' {Form7};
+  TabelPoin in 'TabelPoin.pas' {Form7},
+  TabelUser in 'TabelUser.pas' {Form8};
 
 {$R *.res}
 
@@ -21,5 +22,6 @@ begin
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
   Application.Run;
 end.
