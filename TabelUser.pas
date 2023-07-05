@@ -38,6 +38,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -126,6 +127,17 @@ procedure TForm8.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update user set siswa ="'+edt1.Text+'", password ="'+edt2.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from user');
+  zqry1.Open;
+end;
+
+procedure TForm8.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from user where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
