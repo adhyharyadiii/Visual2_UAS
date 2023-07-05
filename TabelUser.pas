@@ -102,6 +102,7 @@ end;
 
 procedure TForm8.btn1Click(Sender: TObject);
 begin
+  bersih;
   btn1.Enabled:= False;
   btn2.Enabled:= True;
   btn3.Enabled:= False;
