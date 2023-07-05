@@ -227,6 +227,7 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 568
