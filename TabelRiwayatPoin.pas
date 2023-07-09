@@ -50,6 +50,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -154,6 +155,17 @@ procedure TForm10.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update riwayat_poin set siswa_id ="'+edt1.Text+'", poin_id ="'+edt2.Text+'", wali_id ="'+edt3.Text+'", ortu_id ="'+edt4.Text+'", kelas_id ="'+edt5.Text+'", tanggal ="'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'", semester ="'+cbb1.Text+'", status ="'+edt6.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from riwayat_poin');
+  zqry1.Open;
+end;
+
+procedure TForm10.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from riwayat_poin where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

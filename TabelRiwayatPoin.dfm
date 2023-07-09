@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 22
-  Top = 27
+  Left = 338
+  Top = 107
   Width = 697
   Height = 528
   Caption = 'Tabel Riwayat Poin'
@@ -345,6 +345,7 @@ object Form10: TForm10
     Font.Style = []
     ParentFont = False
     TabOrder = 10
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 456
