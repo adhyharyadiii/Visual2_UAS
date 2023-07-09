@@ -49,6 +49,7 @@ type
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -143,6 +144,17 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into riwayat_poin values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'","'+cbb1.Text+'","'+edt6.Text+'")');
   zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from riwayat_poin');
+  zqry1.Open;
+end;
+
+procedure TForm10.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update riwayat_poin set siswa_id ="'+edt1.Text+'", poin_id ="'+edt2.Text+'", wali_id ="'+edt3.Text+'", ortu_id ="'+edt4.Text+'", kelas_id ="'+edt5.Text+'", tanggal ="'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'", semester ="'+cbb1.Text+'", status ="'+edt6.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from riwayat_poin');
