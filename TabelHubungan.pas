@@ -36,6 +36,7 @@ type
     procedure posisiawal;
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -106,6 +107,17 @@ begin
   edt2.Enabled:= True;
   cbb1.Enabled:= True;
   edt3.Enabled:= True;
+end;
+
+procedure TForm9.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into hubungan values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from hubungan');
+  zqry1.Open;
 end;
 
 end.
