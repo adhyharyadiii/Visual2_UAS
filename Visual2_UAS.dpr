@@ -10,7 +10,8 @@ uses
   TabelWaliKelas in 'TabelWaliKelas.pas' {Form6},
   TabelPoin in 'TabelPoin.pas' {Form7},
   TabelUser in 'TabelUser.pas' {Form8},
-  TabelHubungan in 'TabelHubungan.pas' {Form9};
+  TabelHubungan in 'TabelHubungan.pas' {Form9},
+  TabelRiwayatPoin in 'TabelRiwayatPoin.pas' {Form10};
 
 {$R *.res}
 
@@ -25,5 +26,6 @@ begin
   Application.CreateForm(TForm7, Form7);
   Application.CreateForm(TForm8, Form8);
   Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
   Application.Run;
 end.

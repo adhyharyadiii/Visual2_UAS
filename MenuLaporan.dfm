@@ -80,6 +80,7 @@ object Form2: TForm2
       end
       object TabelRiwayatPoin: TMenuItem
         Caption = 'Tabel Riwayat Poin'
+        OnClick = TabelRiwayatPoinClick
       end
     end
     object User1: TMenuItem
