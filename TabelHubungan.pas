@@ -115,6 +115,20 @@ end;
 
 procedure TForm9.btn2Click(Sender: TObject);
 begin
+  if (edt1.Text ='') or (edt2.Text ='')then
+  begin
+    ShowMessage('ID SISWA DAN ID ORANG TUA TIDAK BOLEH KOSONG!');
+  end else
+  if (cbb1.Text ='') or (cbb1.Text ='- Pilih Status Hubungan -') then
+  begin
+    ShowMessage('STATUS HUBUNGAN BELUM DIPILIH');
+  end else
+  if (edt3.Text ='') then
+  begin
+    ShowMessage('KETERANGAN TIDAK BOLEH KOSONG!');
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into hubungan values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'")');
   zqry1.ExecSQL;
@@ -122,6 +136,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from hubungan');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm9.btn3Click(Sender: TObject);
