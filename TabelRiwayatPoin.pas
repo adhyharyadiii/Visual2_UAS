@@ -144,6 +144,24 @@ end;
 
 procedure TForm10.btn2Click(Sender: TObject);
 begin
+  if (edt1.Text ='') or (edt2.Text ='') then
+  begin
+    ShowMessage('ID SISWA DAN ID POIN TIDAK BOLEH KOSONG!');
+  end else
+    if (edt3.Text ='') or (edt4.Text ='') then
+  begin
+    ShowMessage('ID WALI KELAS DAN ID ORANG TUA TIDAK BOLEH KOSONG!');
+  end else
+    if (edt5.Text ='') then
+  begin
+    ShowMessage('ID KELAS TIDAK BOLEH KOSONG!');
+  end else
+    if (cbb1.Text ='') or (cbb1.Text ='- Pilih Semester -') then
+  begin
+    ShowMessage('SEMESTER BELUM DIPILIH');
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into riwayat_poin values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'","'+cbb1.Text+'","'+edt6.Text+'")');
   zqry1.ExecSQL;
@@ -151,6 +169,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from riwayat_poin');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm10.btn3Click(Sender: TObject);
