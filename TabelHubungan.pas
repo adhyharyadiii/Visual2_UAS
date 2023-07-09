@@ -143,6 +143,12 @@ end;
 
 procedure TForm9.btn3Click(Sender: TObject);
 begin
+  if (edt1.Text= '') or (edt2.Text= '') or (cbb1.Text ='') or (cbb1.Text ='- Pilih Status Hubungan -') or (edt3.Text= '')then
+    begin
+    ShowMessage('INPUTAN WAJIB DIISI!');
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update hubungan set siswa_id ="'+edt1.Text+'", ortu_id ="'+edt2.Text+'", status_hub ="'+cbb1.Text+'", keterangan ="'+edt3.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
@@ -150,6 +156,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from hubungan');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIUPDATE!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm9.btn4Click(Sender: TObject);
