@@ -30,6 +30,7 @@ type
     procedure TabelPoinClick(Sender: TObject);
     procedure TabelUserClick(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure TabelHubunganClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,7 +43,7 @@ var
 implementation
 
 uses
-  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin, TabelUser;
+  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin, TabelUser,TabelHubungan;
 
 {$R *.dfm}
 
@@ -79,6 +80,11 @@ end;
 procedure TForm2.btn2Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TForm2.TabelHubunganClick(Sender: TObject);
+begin
+  Form9.Show
 end;
 
 end.

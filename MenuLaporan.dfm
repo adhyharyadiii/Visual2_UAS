@@ -58,6 +58,7 @@ object Form2: TForm2
       end
       object TabelHubungan: TMenuItem
         Caption = 'Tabel Hubungan'
+        OnClick = TabelHubunganClick
       end
     end
     object Kelas1: TMenuItem
