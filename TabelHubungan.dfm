@@ -148,11 +148,8 @@ object Form9: TForm9
     ItemHeight = 13
     TabOrder = 2
     Items.Strings = (
-      'Admin'
-      'Direksi'
-      'Operator'
-      'Teknisi'
-      'Pengguna')
+      'Kandung'
+      'Tiri')
   end
   object btn1: TButton
     Left = 8
@@ -167,6 +164,7 @@ object Form9: TForm9
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 120
@@ -263,8 +261,8 @@ object Form9: TForm9
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
-    Left = 16
-    Top = 184
+    Left = 8
+    Top = 8
   end
   object zqry1: TZQuery
     Connection = con1
@@ -272,12 +270,12 @@ object Form9: TForm9
     SQL.Strings = (
       'select * from hubungan')
     Params = <>
-    Left = 16
-    Top = 224
+    Left = 8
+    Top = 48
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 16
-    Top = 280
+    Left = 8
+    Top = 104
   end
 end
