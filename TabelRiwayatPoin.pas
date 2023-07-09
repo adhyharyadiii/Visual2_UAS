@@ -176,6 +176,12 @@ end;
 
 procedure TForm10.btn3Click(Sender: TObject);
 begin
+  if (edt1.Text= '')or (edt2.Text ='')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='') or (cbb1.Text ='') or (cbb1.Text ='- Pilih Semester -') then
+    begin
+    ShowMessage('INPUTAN WAJIB DIISI!');
+  end else
+
+  begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update riwayat_poin set siswa_id ="'+edt1.Text+'", poin_id ="'+edt2.Text+'", wali_id ="'+edt3.Text+'", ortu_id ="'+edt4.Text+'", kelas_id ="'+edt5.Text+'", tanggal ="'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'", semester ="'+cbb1.Text+'", status ="'+edt6.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
@@ -183,6 +189,9 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from riwayat_poin');
   zqry1.Open;
+  ShowMessage('DATA BERHASIL DIUPDATE!');
+  posisiawal;
+  end;
 end;
 
 procedure TForm10.btn4Click(Sender: TObject);
