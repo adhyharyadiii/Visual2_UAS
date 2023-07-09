@@ -37,6 +37,7 @@ type
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -114,6 +115,17 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('insert into hubungan values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'")');
   zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from hubungan');
+  zqry1.Open;
+end;
+
+procedure TForm9.btn3Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('update hubungan set siswa_id ="'+edt1.Text+'", ortu_id ="'+edt2.Text+'", status_hub ="'+cbb1.Text+'", keterangan ="'+edt3.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from hubungan');
