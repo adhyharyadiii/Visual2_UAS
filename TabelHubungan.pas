@@ -38,6 +38,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -125,6 +126,17 @@ procedure TForm9.btn3Click(Sender: TObject);
 begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('update hubungan set siswa_id ="'+edt1.Text+'", ortu_id ="'+edt2.Text+'", status_hub ="'+cbb1.Text+'", keterangan ="'+edt3.Text+'" where id= "'+id+'"');
+  zqry1. ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from hubungan');
+  zqry1.Open;
+end;
+
+procedure TForm9.btn4Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from hubungan where id="'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;
