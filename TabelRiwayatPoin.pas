@@ -48,6 +48,7 @@ type
     procedure posisiawal;
     procedure db1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,7 +70,6 @@ begin
   edt3.Clear;
   edt4.Clear;
   edt5.Clear;
-  edt6.Clear;
   cbb1.Text := '- Pilih Semester -';
 end;
 
@@ -91,7 +91,6 @@ begin
   edt3.Enabled:= False;
   edt4.Enabled:= False;
   edt5.Enabled:= False;
-  edt6.Enabled:= False;
   cbb1.Enabled:= False;
   edtdtp1.Enabled:= False
 end;
@@ -119,7 +118,6 @@ begin
   edt3.Enabled:= True;
   edt4.Enabled:= True;
   edt5.Enabled:= True;
-  edt6.Enabled:= True;
   edtdtp1.Enabled:= True;
   cbb1.Enabled:= True;
 end;
@@ -136,9 +134,19 @@ begin
   edt3.Enabled:= True;
   edt4.Enabled:= True;
   edt5.Enabled:= True;
-  edt6.Enabled:= True;
   cbb1.Enabled:= True;
   edtdtp1.Enabled:= True;
+end;
+
+procedure TForm10.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into riwayat_poin values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'","'+cbb1.Text+'","'+edt6.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from riwayat_poin');
+  zqry1.Open;
 end;
 
 end.
