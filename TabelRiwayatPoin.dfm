@@ -360,6 +360,7 @@ object Form10: TForm10
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    OnClick = btn5Click
   end
   object edt6: TEdit
     Left = 152
