@@ -206,19 +206,14 @@ end;
 
 procedure TForm3.btn3Click(Sender: TObject);
 begin
-  if (edt1.Text= '')or (edt2.Text ='')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='') or (edt6.Text ='') or (edt7.Text ='') or (edt8.Text ='') or (cbb1.Text ='') or (cbb2.Text ='') or (cbb3.Text ='') or (cbb4.Text ='') or (cbb1.Text ='- Pilih Jenis Kelamin -') or (cbb2.Text ='- Pilih Tingkat Kelas -') or (cbb3.Text ='- Pilih Jurusan -') or (cbb4.Text ='- Pilih Wali Kelas -')then
+  if (edt1.Text= '') or (edt2.Text ='') or (edt3.Text= '') or (edt4.Text ='') or (edt5.Text ='') or (edt6.Text ='') or (edt7.Text ='') or (edt8.Text ='') or (cbb1.Text ='') or (cbb2.Text ='') or (cbb3.Text ='') or (cbb4.Text ='') or (cbb1.Text ='- Pilih Jenis Kelamin -') or (cbb2.Text ='- Pilih Tingkat Kelas -') or (cbb3.Text ='- Pilih Jurusan -') or (cbb4.Text ='- Pilih Wali Kelas -') then
     begin
     ShowMessage('INPUTAN WAJIB DIISI!');
-  end else
-  if (edt3.Text = zqry1.Fields[3].AsString) or (edt7.Text = zqry1.Fields[12].AsString) then
-    begin
-    ShowMessage('DATA TIDAK ADA PERUBAHAN');
-    posisiawal;
   end else
 
  begin
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('update siswa set nama_siswa ="'+edt3.Text+'", telp ="'+edt7.Text+'" where id= "'+id+'"');
+  zqry1.SQL.Add('update siswa set nis ="'+edt1.Text+'", nisn ="'+edt2.Text+'", nama_siswa ="'+edt3.Text+'", nik ="'+edt4.Text+'", tempat_lahir ="'+edt5.Text+'", tanggal_lahir ="'+formatdatetime('yyyy-mm-dd',edtdtp1.Date)+'", jenis_kelamin ="'+cbb1.Text+'", tingkat_kelas ="'+cbb2.Text+'", jurusan ="'+cbb3.Text+'", wali_kelas ="'+cbb4.Text+'", alamat ="'+edt6.Text+'", telp ="'+edt7.Text+'", hp ="'+edt8.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

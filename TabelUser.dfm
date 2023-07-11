@@ -149,9 +149,6 @@ object Form8: TForm8
     TabOrder = 2
     Items.Strings = (
       'Admin'
-      'Direksi'
-      'Operator'
-      'Teknisi'
       'Pengguna')
   end
   object btn1: TButton

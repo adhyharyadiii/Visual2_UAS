@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 331
-  Top = 50
+  Left = 256
+  Top = 132
   Width = 698
   Height = 712
   Caption = 'Tabel Siswa'
@@ -173,7 +173,7 @@ object Form3: TForm3
   end
   object lbl14: TLabel
     Left = 40
-    Top = 424
+    Top = 392
     Width = 18
     Height = 18
     Caption = 'Hp'
@@ -355,9 +355,9 @@ object Form3: TForm3
   end
   object lbl27: TLabel
     Left = 40
-    Top = 392
+    Top = 424
     Width = 41
-    Height = 17
+    Height = 18
     Caption = 'Status'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

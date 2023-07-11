@@ -23,6 +23,13 @@ type
     TabelUser: TMenuItem;
     lbl1: TLabel;
     btn2: TButton;
+    TabelUserJoin1: TMenuItem;
+    InnerJoin: TMenuItem;
+    RightJoin: TMenuItem;
+    LeftJoin: TMenuItem;
+    CrossJoin: TMenuItem;
+    CrossJoinLike1: TMenuItem;
+    QueryLike: TMenuItem;
     procedure TabelSiswaClick(Sender: TObject);
     procedure TabelOrangTuaClick(Sender: TObject);
     procedure TabelKelasClick(Sender: TObject);
@@ -32,6 +39,11 @@ type
     procedure btn2Click(Sender: TObject);
     procedure TabelHubunganClick(Sender: TObject);
     procedure TabelRiwayatPoinClick(Sender: TObject);
+    procedure InnerJoinClick(Sender: TObject);
+    procedure LeftJoinClick(Sender: TObject);
+    procedure RightJoinClick(Sender: TObject);
+    procedure CrossJoinClick(Sender: TObject);
+    procedure QueryLikeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,7 +56,7 @@ var
 implementation
 
 uses
-  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin, TabelUser,TabelHubungan, TabelRiwayatPoin;
+  TabelSiswa, TabelOrangTua, TabelKelas, TabelWaliKelas, TabelPoin, TabelUser, TabelHubungan, TabelRiwayatPoin, InnerJoin, RightJoin, LeftJoin, CrossJoin, QueryLike;
 
 {$R *.dfm}
 
@@ -91,6 +103,31 @@ end;
 procedure TForm2.TabelRiwayatPoinClick(Sender: TObject);
 begin
   Form10.Show;
+end;
+
+procedure TForm2.InnerJoinClick(Sender: TObject);
+begin
+  Form11.Show;
+end;
+
+procedure TForm2.LeftJoinClick(Sender: TObject);
+begin
+  Form12.Show;
+end;
+
+procedure TForm2.RightJoinClick(Sender: TObject);
+begin
+  Form13.Show;
+end;
+
+procedure TForm2.CrossJoinClick(Sender: TObject);
+begin
+  Form14.Show;
+end;
+
+procedure TForm2.QueryLikeClick(Sender: TObject);
+begin
+  Form15.Show;
 end;
 
 end.

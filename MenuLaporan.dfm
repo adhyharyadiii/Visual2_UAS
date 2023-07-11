@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 274
-  Top = 229
+  Left = 231
+  Top = 154
   Width = 928
   Height = 480
   Caption = 'Menu Laporan'
@@ -33,7 +33,7 @@ object Form2: TForm2
     Top = 200
     Width = 129
     Height = 49
-    Caption = 'Kembali'
+    Caption = 'Keluar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
@@ -88,6 +88,32 @@ object Form2: TForm2
       object TabelUser: TMenuItem
         Caption = 'Tabel User'
         OnClick = TabelUserClick
+      end
+    end
+    object TabelUserJoin1: TMenuItem
+      Caption = 'Join'
+      object InnerJoin: TMenuItem
+        Caption = 'Inner Join'
+        OnClick = InnerJoinClick
+      end
+      object RightJoin: TMenuItem
+        Caption = 'Right Join'
+        OnClick = RightJoinClick
+      end
+      object LeftJoin: TMenuItem
+        Caption = 'Left Join'
+        OnClick = LeftJoinClick
+      end
+      object CrossJoin: TMenuItem
+        Caption = 'Cross Join'
+        OnClick = CrossJoinClick
+      end
+    end
+    object CrossJoinLike1: TMenuItem
+      Caption = 'Like'
+      object QueryLike: TMenuItem
+        Caption = 'Query Like'
+        OnClick = QueryLikeClick
       end
     end
   end

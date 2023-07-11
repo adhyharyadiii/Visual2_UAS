@@ -146,15 +146,10 @@ begin
     begin
     ShowMessage('INPUTAN WAJIB DIISI!');
   end else
-  if (edt1.Text = zqry1.Fields[1].AsString) or (cbb1.Text = zqry1.Fields[2].AsString) then
-    begin
-    ShowMessage('DATA TIDAK ADA PERUBAHAN');
-    posisiawal;
-  end else
 
   begin
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('update kelas set nama ="'+edt1.Text+'", jenis ="'+cbb1.Text+'" where id= "'+id+'"');
+  zqry1.SQL.Add('update kelas set nama ="'+edt1.Text+'", jenis ="'+cbb1.Text+'", jurusan ="'+cbb2.Text+'" where id= "'+id+'"');
   zqry1. ExecSQL;
 
   zqry1.SQL.Clear;

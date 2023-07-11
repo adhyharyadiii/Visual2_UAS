@@ -11,7 +11,12 @@ uses
   TabelPoin in 'TabelPoin.pas' {Form7},
   TabelUser in 'TabelUser.pas' {Form8},
   TabelHubungan in 'TabelHubungan.pas' {Form9},
-  TabelRiwayatPoin in 'TabelRiwayatPoin.pas' {Form10};
+  TabelRiwayatPoin in 'TabelRiwayatPoin.pas' {Form10},
+  InnerJoin in 'InnerJoin.pas' {Form11},
+  LeftJoin in 'LeftJoin.pas' {Form12},
+  RightJoin in 'RightJoin.pas' {Form13},
+  CrossJoin in 'CrossJoin.pas' {Form14},
+  QueryLike in 'QueryLike.pas' {Form15};
 
 {$R *.res}
 
@@ -27,5 +32,10 @@ begin
   Application.CreateForm(TForm8, Form8);
   Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm13, Form13);
+  Application.CreateForm(TForm14, Form14);
+  Application.CreateForm(TForm15, Form15);
   Application.Run;
 end.
